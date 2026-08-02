@@ -1,0 +1,63 @@
+:root {
+  --color-bg: #F4F6F5;
+  --color-surface: #FFFFFF;
+  --color-primary: #1B4332;
+  --color-primary-dark: #0F2E20;
+  --color-accent: #FF6B35;
+  --color-accent-dark: #E5562A;
+  --color-text: #1A1A2E;
+  --color-muted: #687076;
+  --color-border: #E2E5E3;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ===================================================
+   Feature 7: Dark mode
+   Toggled by setting data-theme="dark" on <html> (see
+   src/utils/theme.js + the toggle button in Navbar).
+   =================================================== */
+[data-theme="dark"] {
+  --color-bg: #101614;
+  --color-surface: #182420;
+  --color-primary: #3FA97A;
+  --color-primary-dark: #E9F5EE;
+  --color-accent: #FF8156;
+  --color-accent-dark: #FFA485;
+  --color-text: #E7EAE8;
+  --color-muted: #9BA6A1;
+  --color-border: #2A3733;
+}
+
+html, body { background: var(--color-bg); color: var(--color-text); }
+
+/* The app is built with Bootstrap 5 utility/component classes throughout.
+   These overrides redirect the most common ones to the theme variables
+   above so the dark-mode toggle affects the whole app. */
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-light { background-color: var(--color-surface) !important; }
+[data-theme="dark"] body.bg-light,
+[data-theme="dark"] .min-vh-100.bg-light { background-color: var(--color-bg) !important; }
+[data-theme="dark"] .text-dark,
+[data-theme="dark"] .text-body { color: var(--color-text) !important; }
+[data-theme="dark"] .text-secondary,
+[data-theme="dark"] .text-muted { color: var(--color-muted) !important; }
+[data-theme="dark"] .border,
+[data-theme="dark"] .border-top,
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-end,
+[data-theme="dark"] .border-start,
+[data-theme="dark"] .table > :not(caption) > * > * { border-color: var(--color-border) !important; }
+[data-theme="dark"] .card,
+[data-theme="dark"] .navbar.bg-white,
+[data-theme="dark"] .table { background-color: var(--color-surface); color: var(--color-text); }
+[data-theme="dark"] .table-light { background-color: var(--color-bg); color: var(--color-text); }
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] textarea {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .form-control::placeholder { color: var(--color-muted); opacity: 1; }
+[data-theme="dark"] .btn-outline-secondary { color: var(--color-text); border-color: var(--color-border); }
+[data-theme="dark"] .btn-light { background-color: var(--color-surface); color: var(--color-text); border-color: var(--color-border); }
