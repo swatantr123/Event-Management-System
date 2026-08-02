@@ -12,3 +12,6 @@ frontend/dist/
 .vscode/
 .DS_Store
 *.iml
+
+# Local-only credential notes — never commit real secrets
+RENDER_ENV_VALUES.txt
